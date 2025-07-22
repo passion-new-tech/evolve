@@ -1,0 +1,59 @@
+.formCalend {
+  max-width: 900px;
+  margin: 0 auto;
+
+}
+
+.btn-org {
+  background: #ff7b00;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.btn-org:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.main-calend {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 5rem;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-vues {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 4px);
+  min-width: 180px;
+  background: #fff;
+  border: 1px solid #e4e4e4;
+  border-radius: 6px;
+  padding: 0.4rem 0;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-4px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.menu-vues li {
+  list-style: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+.menu-vues li:hover {
+  background: #ffecd6;
+}
+#menu-toggle:checked + .btn-org + .menu-vues {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(0);
+}
